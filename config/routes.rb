@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get "/instructions", to: "pages#instructions", as: "instructions"
-  resources :trees, only: %i[index]
+  resources :trees, only: %i[index show]
 end

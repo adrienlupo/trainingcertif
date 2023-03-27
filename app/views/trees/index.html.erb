@@ -1,5 +1,7 @@
 <h1>index</h1>
 
 <% @trees.each do |tree|%>
-<%= tree.name %>
+  <%= link_to tree_path(tree) do %>
+    <%= tree.name %>
+  <% end %>
 <% end %>
