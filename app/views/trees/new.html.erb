@@ -1,0 +1,21 @@
+ <div class="container py-5 new-margin-top">
+  <div class="row">
+    <div class="">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Ajoutez votre arbre</h3>
+        <%= simple_form_for @tree do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :description %>
+          <%= f.input :price_per_year%>
+          <%= f.input :fruit_type, collection: ["Pulpeux", "Juteux", "Amer", "Rond en bouche", "Suave"], selected: "Suave" %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.button :submit, "Ajouter l'arbre" %>
+        <% end %>
+         <div>
+        <%= link_to "Back to home", root_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
