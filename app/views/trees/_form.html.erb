@@ -1,0 +1,9 @@
+<%= simple_form_for @tree do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :description %>
+          <%= f.input :price_per_year%>
+          <%= f.input :fruit_type, collection: ["Pulpeux", "Juteux", "Amer", "Rond en bouche", "Suave"], selected: "Suave" %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.button :submit, "Ajouter l'arbre" %>
+        <% end %>
