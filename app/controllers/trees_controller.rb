@@ -5,6 +5,7 @@ class TreesController < ApplicationController
 
   def show
     @tree = Tree.find(params[:id])
+    @adoption = Adoption.new
   end
 
   def new
@@ -29,6 +30,12 @@ class TreesController < ApplicationController
     @tree = Tree.find(params[:id])
     @tree.update(tree_params)
     redirect_to tree_path(@tree)
+  end
+
+  def destroy
+    @tree = Tree.find(params[:id])
+    @tree.destroy
+    redirect_to trees_path
   end
 
 

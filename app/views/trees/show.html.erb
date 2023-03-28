@@ -25,4 +25,21 @@
     </button>
 </div>
 
+<h1>Book the tree</h1>
+<%= simple_form_for([@tree, @adoption]) do |f| %>
+    <div class="row">
+      <div class="col">
+        <%= f.input :name %>
+      </div>
+      <div class="col">
+        <%= f.input :starts_at %>
+      </div>
+      <div class="col">
+        <%= f.input :ends_at %>
+      </div>
+    </div>
+    <%= f.submit %>
+  <% end %>
+
 <%= link_to "Edit the tree", edit_tree_path(@tree)  %>
+<%= link_to "Delete the tree", tree_path(@tree), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{@tree.name}"}   %>
