@@ -5,3 +5,19 @@
     <%= tree.name %>
   <% end %>
 <% end %>
+
+
+<% @trees.each do |tree|%>
+ <%# <%= link_to tree_path(tree) do %>
+  <div class="card-trip">
+    <%# <%= cl_image_tag tree.photos.first.key, height: 400, width: 400, crop: :fill %>
+    <div class="card-trip-infos">
+    <div>
+     <h2> <%= tree.name  %> </h2>
+      <p> <%= tree.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= tree.price_per_year %> €</h2>
+  </div>
+</div>
+ <%# <% end %>
+ <% end %>

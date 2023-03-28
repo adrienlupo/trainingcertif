@@ -25,6 +25,13 @@ class TreesController < ApplicationController
     @tree = Tree.find(params[:id])
   end
 
+  def update
+    @tree = Tree.find(params[:id])
+    @tree.update(tree_params)
+    redirect_to tree_path(@tree)
+  end
+
+
   private
 
   def tree_params
