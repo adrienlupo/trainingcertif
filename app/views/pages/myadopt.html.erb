@@ -1,0 +1,35 @@
+<h1>My adoptions</h1>
+
+<% if @adoptions.empty? %>
+  <h3>You have no adoptions yet</h3>
+<% end %>
+<% @adoptions.each do |adoption| %>
+<%= link_to tree_path(adoption.tree), style: 'text-decoration: none; color: black;' do %>
+  <div class="card-trip">
+    <%= cl_image_tag adoption.tree.photos.first.key, height: 400, width: 400, crop: :fill %>
+    <div class="card-trip-infos">
+      <h2> <%= adoption.tree.name  %> </h2>
+      <p> <%= adoption.tree.description %></p>
+      <h2 class="card-trip-pricing"> <%= adoption.tree.price_per_year %> €</h2>
+    </div>
+  </div>
+<% end %>
+<% end %>
+
+<h1>My trees</h1>
+
+<% if @trees.empty? %>
+  <h3>You have no trees yet</h3>
+<% end %>
+<% @trees.each do |tree| %>
+ <%= link_to tree_path(tree), style: 'text-decoration: none; color: black;' do %>
+  <div class="card-trip">
+    <%= cl_image_tag tree.photos.first.key, height: 400, width: 400, crop: :fill %>
+    <div class="card-trip-infos">
+      <h2> <%= tree.name  %> </h2>
+      <p> <%= tree.description %></p>
+      <h2 class="card-trip-pricing"> <%= tree.price_per_year %> €</h2>
+    </div>
+  </div>
+   <% end %>
+  <% end %>

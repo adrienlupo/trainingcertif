@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :trees do
     resources :adoptions, only: :create
   end
+  get "/myadopt", to: "pages#myadopt", as: "myadopt"
 end

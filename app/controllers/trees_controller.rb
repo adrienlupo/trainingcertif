@@ -39,6 +39,12 @@ class TreesController < ApplicationController
   end
 
 
+  def mine?
+    @tree = Tree.find(id)
+    @tree.user == current_user
+  end
+
+
   private
 
   def tree_params

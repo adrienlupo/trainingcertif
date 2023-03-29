@@ -5,5 +5,10 @@ class PagesController < ApplicationController
     flash[:notice] = "Click <a class='instruction-link' href='/instructions'>here</a> to see the instructions"
   end
 
+  def myadopt
+    @adoptions = current_user.adoptions
+    @trees = current_user.trees
+  end
+
   def instructions; end
 end

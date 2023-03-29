@@ -14,8 +14,8 @@ appletree = Tree.create!(name: 'John’s apple tree',
   description: 'This apple tree produces both sweet and sour apples. They will be perfect to cut a little hunger, or enjoy a juicy apple for the dessert.',
   price_per_year: 175, quantity_per_year: 5, fruit_type: 'Apple', user: john)
 
-appletree1 = URI.open('https://www.jardiner-malin.fr/wp-content/uploads/2021/09/pommier.jpg')
-appletree2 = URI.open('https://www.jardiner-malin.fr/wp-content/uploads/2017/02/pommier-320x229.jpg')
+appletree1 = URI.open('https://res.cloudinary.com/degkqrdcu/image/upload/v1680082368/premium_photo-1666353533342-8b4d23f31cb5_zdfjwy.jpg')
+appletree2 = URI.open('https://res.cloudinary.com/degkqrdcu/image/upload/v1680086402/photo-1633545382904-5e97dedc6e19_dw6sao.jpg')
 
 
 appletree.photos.attach(io: appletree1, filename: 'appletree1.jpg', content_type: 'image/jpg')
