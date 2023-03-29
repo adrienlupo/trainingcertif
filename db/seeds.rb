@@ -26,5 +26,5 @@ abricotier = Tree.create!(name: "Abricotier d'Adrien",
   description: 'Lorem Ipsum Abricot',
   price_per_year: 50, quantity_per_year: 5, fruit_type: 'Abricot', user: adrien)
 
-abricotier1 = URI.open('https://www.jardiner-malin.fr/wp-content/uploads/2020/02/pommier-en-fleur-320x213.jpg')
+abricotier1 = URI.open('https://res.cloudinary.com/degkqrdcu/image/upload/v1680088067/photo-1565769583756-fe3ffffcae49_vtfyqb.jpg')
 abricotier.photos.attach(io: abricotier1, filename: 'abricotier1.jpg', content_type: 'image/jpg')
